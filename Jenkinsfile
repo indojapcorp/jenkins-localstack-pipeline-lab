@@ -27,7 +27,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         dir('app') {
-          sh 'aws --endpoint-url=http://localstack:4566 s3 cp app.py s3://my-bucket'
+          sh 'aws --endpoint-url=http://localhost:4566 s3 cp app.py s3://my-bucket'
         }
       }
     }
