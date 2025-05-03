@@ -18,8 +18,8 @@ pipeline {
     stage('Provision Infra') {
       steps {
         dir('infra') {
-          sh 'terraform init'
-          sh 'terraform apply -auto-approve'
+          sh 'tflocal init'
+          sh 'tflocal apply -auto-approve'
         }
       }
     }
