@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/indojapcorp/jenkins-localstack-pipeline-lab.git'
+        git url: 'https://github.com/indojapcorp/jenkins-localstack-pipeline-lab.git' , branch:'main'
       }
     }
 
