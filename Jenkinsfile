@@ -5,7 +5,7 @@ pipeline {
     AWS_ACCESS_KEY_ID = 'test'
     AWS_SECRET_ACCESS_KEY = 'test'
     AWS_REGION = 'us-east-1'
-    LOCALSTACK_HOST = 'http://localstack:4566'
+    LOCALSTACK_HOST = 'localstack:4566'
   }
 
   stages {
