@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://your-repo-url'
+        git url: 'https://github.com/indojapcorp/jenkins-localstack-pipeline-lab.git'
       }
     }
 
@@ -27,7 +27,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         dir('app') {
-          sh 'aws --endpoint-url=$LOCALSTACK_HOST s3 cp app.py s3://my-bucket'
+          sh 'awslocal --endpoint-url=$LOCALSTACK_HOST s3 cp app.py s3://my-bucket'
         }
       }
     }
